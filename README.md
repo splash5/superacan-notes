@@ -4,9 +4,9 @@ All research notes about super acan.
 
 # About the controller
 
-The official super acan controller is hard to find and not so good for playing.
+The official super acan controller is hard to find and not good for game playing.
 But you can use the SNES controller on super acan with a custom adapter.
-The button mapping is different from SNES.
+The controller protocol is the same as SNES, but the button mapping is a little different.
 
 | Acan | SNES |
 |------|------|
