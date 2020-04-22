@@ -32,7 +32,7 @@ When powering on the 68k CPU runs code which store inside 6619 chip (like Genesi
 about 6650 (like make sure that RAM exists and work properly) and finally reads a special string and compare it.
 CPU communicate to 6650 with two memory location(register):
 
-- 0xEB0D02 (R)
+- 0xEB0D02 (W)
 > Which address to access inside 6650.
 - 0xEB0D00 (R/W)
 > Data on that address.
