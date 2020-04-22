@@ -27,9 +27,10 @@ Not very sure and not tested but some game should support multitap (which never 
 
 # About the 6650 chip
 
-This should be a CIC chip and when power on the 68k CPU runs code which store inside 6619 chip (like Genesis TMSS).
-The code basiclly doing some simple check on 6650 and checks a special string reading from 6650.
-CPU communicate with 6650 with two memory location(register):
+This acts as a CIC chip but only contains at least 32 bytes RAM and 16 bytes ROM. (No CPU inside it I guess)
+When powering on the 68k CPU runs code which store inside 6619 chip (like Genesis TMSS) and doing some check
+about 6650 (like make sure that RAM exists and work properly) and finally reads a special string and compare it.
+CPU communicate to 6650 with two memory location(register):
 
 - 0xEB0D02 (R)
 > Which address to access inside 6650.
