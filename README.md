@@ -10,18 +10,18 @@ The controller protocol is the same as SNES, but the button mapping is a little 
 
 | Acan | SNES |
 |------|------|
-|      |   B  |
-|      |   Y  |
-| START|SELECT|
-|SELECT| START|
-|   Up |   Up |
-| Down | Down |
-| Left | Left |
-| Right| Right|
-|      |   A  |
-|      |   X  |
-|   L  |   L  |
-|   R  |   R  |
+|A     |B     |
+|B     |Y     |
+|START |SELECT|
+|SELECT|START |
+|Up    |Up    |
+|Down  |Down  |
+|Left  |Left  |
+|Right |Right |
+|X     |A     |
+|Y     |X     |
+|L     |L     |
+|R     |R     |
 
 Not very sure and not tested but some game should support multitap (which never officially released, only mentioned on manual).
 
