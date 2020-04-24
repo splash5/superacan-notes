@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.5.1">
+<eagle version="9.6.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -8926,7 +8926,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <part name="P+8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
 <part name="P+1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
 <part name="SUPPLY10" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
-<part name="SUPPLY11" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
+<part name="P+9" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -9061,8 +9061,8 @@ In this library the device names are the same as the pin names of the symbols, t
 <instance part="SUPPLY10" gate="GND" x="49.53" y="187.96" smashed="yes">
 <attribute name="VALUE" x="49.53" y="186.055" size="1.27" layer="96" align="top-center"/>
 </instance>
-<instance part="SUPPLY11" gate="GND" x="20.32" y="132.08" smashed="yes">
-<attribute name="VALUE" x="20.32" y="130.175" size="1.27" layer="96" align="top-center"/>
+<instance part="P+9" gate="VCC" x="20.32" y="189.23" smashed="yes">
+<attribute name="VALUE" x="20.32" y="190.5" size="1.27" layer="96" align="bottom-center"/>
 </instance>
 </instances>
 <busses>
@@ -9237,6 +9237,12 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="29.21" y1="203.2" x2="29.21" y2="200.66" width="0.1524" layer="91"/>
 <junction x="29.21" y="200.66"/>
 </segment>
+<segment>
+<pinref part="U9" gate="G$1" pin="BERR"/>
+<wire x1="24.13" y1="171.45" x2="20.32" y2="171.45" width="0.1524" layer="91"/>
+<wire x1="20.32" y1="171.45" x2="20.32" y2="186.69" width="0.1524" layer="91"/>
+<pinref part="P+9" gate="VCC" pin="VCC"/>
+</segment>
 </net>
 <net name="CPU_FC0" class="0">
 <segment>
@@ -9364,12 +9370,6 @@ In this library the device names are the same as the pin names of the symbols, t
 <pinref part="BC9" gate="G$1" pin="2"/>
 <wire x1="49.53" y1="200.66" x2="43.18" y2="200.66" width="0.1524" layer="91"/>
 <pinref part="SUPPLY10" gate="GND" pin="GND"/>
-</segment>
-<segment>
-<pinref part="U9" gate="G$1" pin="BERR"/>
-<wire x1="24.13" y1="171.45" x2="20.32" y2="171.45" width="0.1524" layer="91"/>
-<wire x1="20.32" y1="171.45" x2="20.32" y2="134.62" width="0.1524" layer="91"/>
-<pinref part="SUPPLY11" gate="GND" pin="GND"/>
 </segment>
 </net>
 <net name="CPU_A1" class="0">
