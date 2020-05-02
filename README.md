@@ -42,31 +42,49 @@ Unlock procedure pseudo code:
 
     boolean unlock(void) {
       const uint8_t special[] = {0x9b, 0x65, 0x70, 0x90, 0x29, 0x43, 0x28, 0x20, 0x34, 0x39, 0x39, 0x31, 0x20, 0x43, 0x4d, 0x55};
+      const uint8_t *um6650_addr_reg = (uint8_t far *)0xeb0d02;
+      const uint8_t *um6650_data_reg = (uint8_t far *)0xeb0d00;
+      
       uint8_t count; 
       uint8_t mem[32];
     
-      for (count = 0; count < 32; count++)
-        mem[count] = um6650[0x5f - count];
-    
-      for (count = 0x5f; count <= 0x40; count--)
-        um6650[count] = count;
+      for (count = 0; count < 32; count++) {
+      	*um6650_addr_reg = 0x5f - count;
+      	mem[count] = *um6650_data_reg;
+      
+      }
     
       for (count = 0x5f; count <= 0x40; count--) {
-        if (um6650[count] != count)
-          return false;
+        *um6650_addr_reg = count;
+        *um6650_data_reg = count;
+      }
+    
+      for (count = 0x5f; count <= 0x40; count--) {
+        *um6650_addr_reg = count;
+        
+        if (*um6650_data_reg != count)
+          return false;      
       }
       
-      for (count = 0; count < 32; count++)
-        um6650[0x5f - count] = mem[count];
+      for (count = 0; count < 32; count++) {
+        *um6650_addr_reg = 0x5f - count;
+        *um6650_data_reg = mem[count];
+      }
       
       for (count = 0; count < 16; count++) {
-        if (um6650[0x2f - count] != special[count])
-          return false;
+        *um6650_addr_reg = 0x2f - count;
+        
+        if (*um6650_data_reg != special[count])
+          return false;      
       }
       
-      um6650[0x09] = 0xff;
-      uint8_t tmp = um6650[0x0c];  // ? 
-      um6650[0x0c] = 0x00;
+      // unknown purpose
+      *um6650_addr_reg = 0x09;
+      *um6650_data_reg = 0xff;
       
+      *um6650_addr_reg = 0x0c;
+      uint8_t tmp = *um6650_data_reg;	// ?
+      *um6650_data_reg = 0x00;
+            
       return true;
     }
