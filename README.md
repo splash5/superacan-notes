@@ -1,3 +1,4 @@
+
 # superacan-notes
 
 All research notes about super acan.
@@ -36,3 +37,36 @@ CPU communicate to 6650 with two memory location(register):
 > Which address to access inside 6650.
 - 0xEB0D00 (R/W)
 > Data on that address.
+
+Unlock procedure pseudo code:
+
+    boolean unlock(void) {
+      const uint8_t special[] = {0x9b, 0x65, 0x70, 0x90, 0x29, 0x43, 0x28, 0x20, 0x34, 0x39, 0x39, 0x31, 0x20, 0x43, 0x4d, 0x55};
+      uint8_t count; 
+      uint8_t mem[32];
+    
+      for (count = 0; count < 32; count++)
+        mem[count] = um6650[0x5f - count];
+    
+      for (count = 0x5f; count <= 0x40; count--)
+        um6650[count] = count;
+    
+      for (count = 0x5f; count <= 0x40; count--) {
+        if (um6650[count] != count)
+          return false;
+      }
+      
+      for (count = 0; count < 32; count++)
+        um6650[0x5f - count] = mem[count];
+      
+      for (count = 0; count < 16; count++) {
+        if (um6650[0x2f - count] != special[count])
+          return false;
+      }
+      
+      um6650[0x09] = 0xff;
+      uint8_t tmp = um6650[0x0c];  // ? 
+      um6650[0x0c] = 0x00;
+      
+      return true;
+    }
