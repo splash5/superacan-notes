@@ -38,27 +38,29 @@ CPU communicate to 6650 with two memory location(register):
 - 0xEB0D00 (R/W)
 > Data on that address.
 
-Unlock procedure pseudo code:
+Booting procedure pseudo code:
 
-    boolean unlock(void) {
+    boolean booting_check(void) {
       const uint8_t special[] = {0x9b, 0x65, 0x70, 0x90, 0x29, 0x43, 0x28, 0x20, 0x34, 0x39, 0x39, 0x31, 0x20, 0x43, 0x4d, 0x55};
       const uint8_t *um6650_addr_reg = (uint8_t far *)0xeb0d02;
       const uint8_t *um6650_data_reg = (uint8_t far *)0xeb0d00;
       
       uint8_t count; 
       uint8_t mem[32];
-    
+
+      // backup values inside 6650
       for (count = 0; count < 32; count++) {
       	*um6650_addr_reg = 0x5f - count;
       	mem[count] = *um6650_data_reg;
-      
       }
     
+      // filling test pattern
       for (count = 0x5f; count <= 0x40; count--) {
         *um6650_addr_reg = count;
         *um6650_data_reg = count;
       }
     
+      // check if previous writing succeed
       for (count = 0x5f; count <= 0x40; count--) {
         *um6650_addr_reg = count;
         
@@ -66,11 +68,13 @@ Unlock procedure pseudo code:
           return false;      
       }
       
+      // restore values back to 6650
       for (count = 0; count < 32; count++) {
         *um6650_addr_reg = 0x5f - count;
         *um6650_data_reg = mem[count];
       }
       
+      // check if special string matches
       for (count = 0; count < 16; count++) {
         *um6650_addr_reg = 0x2f - count;
         
@@ -83,7 +87,7 @@ Unlock procedure pseudo code:
       *um6650_data_reg = 0xff;
       
       *um6650_addr_reg = 0x0c;
-      uint8_t tmp = *um6650_data_reg;	// ?
+      uint8_t tmp = *um6650_data_reg;	// tmp = 0xff
       *um6650_data_reg = 0x00;
             
       return true;
