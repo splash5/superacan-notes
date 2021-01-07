@@ -1,4 +1,5 @@
 
+
 # superacan-notes
 
 All research notes about super acan.
@@ -92,3 +93,7 @@ Booting procedure pseudo code:
             
       return true;
     }
+Based on these info, I built a tiny PCB with a AT28C64B which stores the special string at 0x20 to 0x2f, and filled 0x40 to 0x5f with 0x40 to 0x5f accordingly. And It did pass the checking and the game boots up!
+
+I put EAGLE schematic, board and gerber file in [here](pcb/eagle/UM6650C).If you want to build by yourself, you need to program AT28C64B with [this file](pcb/eagle/UM6650C/UM6650C.bin) first. After programming the AT28C64B, solder it on PCB and close the solder jumper next to C5 capacitor (mark with a tiny arrow). I also shared gerber on [oshpark](https://oshpark.com/shared_projects/0XdS5ExD) so you can order PCB from there.
+
