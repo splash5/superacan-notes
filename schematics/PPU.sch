@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.6.1">
+<eagle version="9.6.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -21239,8 +21239,8 @@ Source: SEMTECH ELECTRONICS LTD. ... 2SC945  2.pdf</description>
 <instance part="SUPPLY9" gate="GND" x="214.63" y="172.72" smashed="yes">
 <attribute name="VALUE" x="212.725" y="169.545" size="1.778" layer="96"/>
 </instance>
-<instance part="AGND1" gate="VR1" x="222.25" y="80.01" smashed="yes">
-<attribute name="VALUE" x="222.25" y="78.74" size="1.778" layer="96" align="top-center"/>
+<instance part="AGND1" gate="VR1" x="222.25" y="86.36" smashed="yes">
+<attribute name="VALUE" x="222.25" y="85.09" size="1.778" layer="96" align="top-center"/>
 </instance>
 <instance part="JP1" gate="G$1" x="68.58" y="58.42" smashed="yes">
 <attribute name="NAME" x="71.12" y="59.9186" size="1.27" layer="95" align="top-left"/>
@@ -21321,9 +21321,9 @@ Source: SEMTECH ELECTRONICS LTD. ... 2SC945  2.pdf</description>
 <attribute name="NAME" x="278.765" y="101.854" size="1.27" layer="95" rot="MR0"/>
 <attribute name="VALUE" x="279.4" y="101.6" size="1.27" layer="96" rot="MR0" align="top-left"/>
 </instance>
-<instance part="R23" gate="G$1" x="276.86" y="106.68" smashed="yes">
-<attribute name="NAME" x="279.4" y="106.9086" size="1.27" layer="95"/>
-<attribute name="VALUE" x="279.4" y="105.918" size="1.27" layer="96" align="top-left"/>
+<instance part="R23" gate="G$1" x="276.86" y="111.76" smashed="yes">
+<attribute name="NAME" x="279.4" y="111.9886" size="1.27" layer="95"/>
+<attribute name="VALUE" x="279.4" y="110.998" size="1.27" layer="96" align="top-left"/>
 </instance>
 <instance part="R22" gate="G$1" x="284.48" y="95.25" smashed="yes" rot="R270">
 <attribute name="NAME" x="285.75" y="96.7486" size="1.27" layer="95"/>
@@ -21333,20 +21333,20 @@ Source: SEMTECH ELECTRONICS LTD. ... 2SC945  2.pdf</description>
 <attribute name="NAME" x="288.29" y="86.1314" size="1.27" layer="95" rot="R180"/>
 <attribute name="VALUE" x="288.29" y="83.312" size="1.27" layer="96" rot="R180" align="top-left"/>
 </instance>
-<instance part="Q3" gate="G$1" x="287.02" y="114.3" smashed="yes" rot="MR0">
-<attribute name="NAME" x="285.75" y="118.11" size="1.27" layer="95"/>
-<attribute name="VALUE" x="285.75" y="116.84" size="1.27" layer="96"/>
+<instance part="Q3" gate="G$1" x="285.75" y="111.76" smashed="yes">
+<attribute name="NAME" x="287.02" y="115.57" size="1.27" layer="95" rot="MR0"/>
+<attribute name="VALUE" x="287.02" y="114.3" size="1.27" layer="96" rot="MR0"/>
 </instance>
-<instance part="R24" gate="G$1" x="299.72" y="114.3" smashed="yes">
-<attribute name="NAME" x="302.26" y="114.5286" size="1.27" layer="95"/>
-<attribute name="VALUE" x="302.26" y="113.538" size="1.27" layer="96" align="top-left"/>
+<instance part="R24" gate="G$1" x="309.88" y="104.14" smashed="yes">
+<attribute name="NAME" x="312.42" y="104.3686" size="1.27" layer="95"/>
+<attribute name="VALUE" x="312.42" y="103.378" size="1.27" layer="96" align="top-left"/>
 </instance>
-<instance part="R12" gate="G$1" x="292.1" y="106.68" smashed="yes" rot="R270">
-<attribute name="NAME" x="293.37" y="107.9246" size="1.27" layer="95"/>
-<attribute name="VALUE" x="293.37" y="106.68" size="1.27" layer="96" align="top-left"/>
+<instance part="R12" gate="G$1" x="302.26" y="96.52" smashed="yes" rot="R270">
+<attribute name="NAME" x="303.53" y="97.7646" size="1.27" layer="95"/>
+<attribute name="VALUE" x="303.53" y="96.52" size="1.27" layer="96" align="top-left"/>
 </instance>
-<instance part="SUPPLY12" gate="GND" x="292.1" y="96.52" smashed="yes">
-<attribute name="VALUE" x="290.195" y="93.345" size="1.778" layer="96"/>
+<instance part="SUPPLY12" gate="GND" x="302.26" y="86.36" smashed="yes">
+<attribute name="VALUE" x="300.355" y="83.185" size="1.778" layer="96"/>
 </instance>
 <instance part="Q2" gate="G$1" x="228.6" y="48.26" smashed="yes" rot="R180">
 <attribute name="NAME" x="230.7844" y="50.9524" size="1.778" layer="95" rot="MR180"/>
@@ -21416,9 +21416,9 @@ Source: SEMTECH ELECTRONICS LTD. ... 2SC945  2.pdf</description>
 <instance part="SUPPLY15" gate="GND" x="209.55" y="91.44" smashed="yes">
 <attribute name="VALUE" x="207.645" y="88.265" size="1.778" layer="96"/>
 </instance>
-<instance part="JP3" gate="1" x="222.25" y="88.9" smashed="yes" rot="R90">
-<attribute name="NAME" x="219.71" y="91.44" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="226.06" y="86.36" size="1.778" layer="96" rot="R90"/>
+<instance part="JP3" gate="1" x="222.25" y="95.25" smashed="yes" rot="R90">
+<attribute name="NAME" x="219.71" y="97.79" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="226.06" y="92.71" size="1.778" layer="96" rot="R90"/>
 </instance>
 </instances>
 <busses>
@@ -22552,7 +22552,7 @@ Source: SEMTECH ELECTRONICS LTD. ... 2SC945  2.pdf</description>
 <segment>
 <pinref part="JP3" gate="1" pin="1"/>
 <pinref part="AGND1" gate="VR1" pin="AGND"/>
-<wire x1="222.25" y1="83.82" x2="222.25" y2="82.55" width="0.1524" layer="91"/>
+<wire x1="222.25" y1="90.17" x2="222.25" y2="88.9" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VDD" class="0">
@@ -22853,7 +22853,7 @@ Source: SEMTECH ELECTRONICS LTD. ... 2SC945  2.pdf</description>
 </segment>
 <segment>
 <pinref part="R12" gate="G$1" pin="2"/>
-<wire x1="292.1" y1="101.6" x2="292.1" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="302.26" y1="91.44" x2="302.26" y2="88.9" width="0.1524" layer="91"/>
 <pinref part="SUPPLY12" gate="GND" pin="GND"/>
 </segment>
 <segment>
@@ -22967,7 +22967,7 @@ Source: SEMTECH ELECTRONICS LTD. ... 2SC945  2.pdf</description>
 <pinref part="U4" gate="G$1" pin="NPIN"/>
 <wire x1="222.25" y1="101.6" x2="231.14" y2="101.6" width="0.1524" layer="91"/>
 <pinref part="JP3" gate="1" pin="2"/>
-<wire x1="222.25" y1="93.98" x2="222.25" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="222.25" y1="100.33" x2="222.25" y2="101.6" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$27" class="0">
@@ -22999,10 +22999,10 @@ Source: SEMTECH ELECTRONICS LTD. ... 2SC945  2.pdf</description>
 <junction x="228.6" y="76.2"/>
 <pinref part="C16" gate="G$1" pin="+"/>
 <wire x1="228.6" y1="69.85" x2="245.11" y2="69.85" width="0.1524" layer="91"/>
-<pinref part="Q3" gate="G$1" pin="C"/>
-<wire x1="284.48" y1="119.38" x2="284.48" y2="127" width="0.1524" layer="91"/>
-<wire x1="284.48" y1="127" x2="228.6" y2="127" width="0.1524" layer="91"/>
+<wire x1="288.29" y1="127" x2="228.6" y2="127" width="0.1524" layer="91"/>
 <junction x="228.6" y="127"/>
+<pinref part="Q3" gate="G$1" pin="C"/>
+<wire x1="288.29" y1="116.84" x2="288.29" y2="127" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$26" class="0">
@@ -23016,13 +23016,14 @@ Source: SEMTECH ELECTRONICS LTD. ... 2SC945  2.pdf</description>
 <net name="N$23" class="0">
 <segment>
 <pinref part="U4" gate="G$1" pin="CVOUT"/>
-<pinref part="R23" gate="G$1" pin="1"/>
-<wire x1="271.78" y1="106.68" x2="270.51" y2="106.68" width="0.1524" layer="91"/>
 <pinref part="C15" gate="G$1" pin="+"/>
 <wire x1="270.51" y1="106.68" x2="266.7" y2="106.68" width="0.1524" layer="91"/>
 <wire x1="271.78" y1="101.6" x2="270.51" y2="101.6" width="0.1524" layer="91"/>
 <wire x1="270.51" y1="101.6" x2="270.51" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="270.51" y1="106.68" x2="270.51" y2="111.76" width="0.1524" layer="91"/>
 <junction x="270.51" y="106.68"/>
+<pinref part="R23" gate="G$1" pin="1"/>
+<wire x1="270.51" y1="111.76" x2="271.78" y2="111.76" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="RF_VIDEO" class="0">
@@ -23036,22 +23037,11 @@ Source: SEMTECH ELECTRONICS LTD. ... 2SC945  2.pdf</description>
 <label x="288.29" y="88.9" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
-<net name="N$28" class="0">
-<segment>
-<pinref part="Q3" gate="G$1" pin="B"/>
-<pinref part="R24" gate="G$1" pin="1"/>
-<wire x1="289.56" y1="114.3" x2="292.1" y2="114.3" width="0.1524" layer="91"/>
-<pinref part="R12" gate="G$1" pin="1"/>
-<wire x1="292.1" y1="114.3" x2="294.64" y2="114.3" width="0.1524" layer="91"/>
-<wire x1="292.1" y1="111.76" x2="292.1" y2="114.3" width="0.1524" layer="91"/>
-<junction x="292.1" y="114.3"/>
-</segment>
-</net>
 <net name="VIDEO_OUT" class="0">
 <segment>
 <pinref part="R24" gate="G$1" pin="2"/>
-<wire x1="304.8" y1="114.3" x2="307.34" y2="114.3" width="0.1524" layer="91"/>
-<label x="307.34" y="114.3" size="1.27" layer="95" xref="yes"/>
+<wire x1="314.96" y1="104.14" x2="317.5" y2="104.14" width="0.1524" layer="91"/>
+<label x="317.5" y="104.14" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="N$29" class="0">
@@ -23161,14 +23151,6 @@ Source: SEMTECH ELECTRONICS LTD. ... 2SC945  2.pdf</description>
 <pinref part="U12" gate="G$1" pin="JOY_2"/>
 <wire x1="76.2" y1="63.5" x2="73.66" y2="63.5" width="0.1524" layer="91"/>
 <label x="73.66" y="63.5" size="1.27" layer="95" rot="MR0" xref="yes"/>
-</segment>
-</net>
-<net name="N$12" class="0">
-<segment>
-<pinref part="R23" gate="G$1" pin="2"/>
-<wire x1="281.94" y1="106.68" x2="284.48" y2="106.68" width="0.1524" layer="91"/>
-<pinref part="Q3" gate="G$1" pin="E"/>
-<wire x1="284.48" y1="106.68" x2="284.48" y2="109.22" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$25" class="0">
@@ -23349,6 +23331,25 @@ Source: SEMTECH ELECTRONICS LTD. ... 2SC945  2.pdf</description>
 <wire x1="279.4" y1="101.6" x2="284.48" y2="101.6" width="0.1524" layer="91"/>
 <pinref part="R22" gate="G$1" pin="1"/>
 <wire x1="284.48" y1="101.6" x2="284.48" y2="100.33" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$12" class="0">
+<segment>
+<pinref part="R23" gate="G$1" pin="2"/>
+<pinref part="Q3" gate="G$1" pin="B"/>
+<wire x1="281.94" y1="111.76" x2="283.21" y2="111.76" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$43" class="0">
+<segment>
+<pinref part="Q3" gate="G$1" pin="E"/>
+<wire x1="288.29" y1="106.68" x2="288.29" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="288.29" y1="104.14" x2="302.26" y2="104.14" width="0.1524" layer="91"/>
+<pinref part="R24" gate="G$1" pin="1"/>
+<pinref part="R12" gate="G$1" pin="1"/>
+<wire x1="302.26" y1="104.14" x2="304.8" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="302.26" y1="101.6" x2="302.26" y2="104.14" width="0.1524" layer="91"/>
+<junction x="302.26" y="104.14"/>
 </segment>
 </net>
 </nets>
