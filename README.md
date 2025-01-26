@@ -34,17 +34,17 @@ When powering on the 68k CPU runs code which store inside 6619 chip (like Genesi
 about 6650 (like make sure that RAM exists and work properly) and finally reads a special string and compare it.
 CPU communicate to 6650 with two memory location(register):
 
-- 0xEB0D02 (W)
+- 0xEB0D03 (W)
 > Which address to access inside 6650.
-- 0xEB0D00 (R/W)
+- 0xEB0D01 (R/W)
 > Data on that address.
 
 Booting procedure pseudo code:
 
     boolean booting_check(void) {
       const uint8_t special[] = {0x9b, 0x65, 0x70, 0x90, 0x29, 0x43, 0x28, 0x20, 0x34, 0x39, 0x39, 0x31, 0x20, 0x43, 0x4d, 0x55};
-      const uint8_t *um6650_addr_reg = (uint8_t far *)0xeb0d02;
-      const uint8_t *um6650_data_reg = (uint8_t far *)0xeb0d00;
+      const uint8_t *um6650_addr_reg = (uint8_t far *)0xeb0d03;
+      const uint8_t *um6650_data_reg = (uint8_t far *)0xeb0d01;
       
       uint8_t count; 
       uint8_t mem[32];
